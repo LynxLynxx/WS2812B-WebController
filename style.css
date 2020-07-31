@@ -1,0 +1,7 @@
+.controller{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+}
+

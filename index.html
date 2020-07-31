@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>WS2812B WebController</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-3 mb-2 bg-dark text-white">
+<div class="container">
+    <div class="logo">
+        <h1 class="display-3 text-center border-bottom border-primary">WS2812B Web Controller</h1>
+    </div>
+    <div class="controller pt-5">
+        <div class="items float-lg-left">
+            <h4 class="text-center mb-3"> Controller 1 </h4>
+            <form class="form-range" method="post">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Mode</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="wheel">Wheel</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="rainbowCycle">Rainbow Cycle</option>
+                        <option value="colorWipe">Color Wipe</option>
+                        <option value="theaterChase">Theater Chase</option>
+                        <option value="theaterChaseRainbow">Theater Chase Rainbow</option>
+                        <option value="scrollWipe">Scroll Wipe</option>
+                        <option value="fade">Fade</option>
+                        <option value="solid">Solid</option>
+                    </select>
+                </div>
+                <h6 class="text-center mb-0"> Wait</h6>
+                <div class="d-flex justify-content-center my-2 ">
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                    <label>
+                        <input  class="form-control-range" type="range" min="0" max="1000">
+                    </label>
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">1000</span>
+                </div>
+                <h6 class="text-center mb-0"> Brightness</h6>
+                <div class="d-flex justify-content-center my-2 ">
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                    <label>
+                        <input  class="form-control-range" type="range" min="0" max="1000">
+                    </label>
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">100</span>
+                </div>
+                <div class="d-flex justify-content-center my-3 ">
+                    <label>
+                        <input  type="color" name="color" value="#ff0000">
+                    </label>
+                </div>
+                <div class="d-flex justify-content-center my-3 ">
+                    <button type="submit" class="btn btn-success" style="margin-right: 10px;" id="set" name="set" value="off">Set</button>
+                    <button type="submit" class="btn btn-danger text-right" id="off" name="off" value="off">Off</button>
+                </div>
+            </form>
+        </div>
+        <div class="items float-lg-left">
+            <h4 class="text-center mb-3"> Controller 2 </h4>
+            <form class="form-range" method="post">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Mode</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="wheel">Wheel</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="rainbowCycle">Rainbow Cycle</option>
+                        <option value="colorWipe">Color Wipe</option>
+                        <option value="theaterChase">Theater Chase</option>
+                        <option value="theaterChaseRainbow">Theater Chase Rainbow</option>
+                        <option value="scrollWipe">Scroll Wipe</option>
+                        <option value="fade">Fade</option>
+                        <option value="solid">Solid</option>
+                    </select>
+                </div>
+                <h6 class="text-center mb-0"> Wait</h6>
+                <div class="d-flex justify-content-center my-2 ">
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                    <label>
+                        <input  class="form-control-range" type="range" min="0" max="1000">
+                    </label>
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">1000</span>
+                </div>
+                <h6 class="text-center mb-0"> Brightness</h6>
+                <div class="d-flex justify-content-center my-2 ">
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                    <label>
+                        <input  class="form-control-range" type="range" min="0" max="1000">
+                    </label>
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">100</span>
+                </div>
+                <div class="d-flex justify-content-center my-3 ">
+                    <label>
+                        <input  type="color" name="color" value="#ff0000">
+                    </label>
+                </div>
+                <div class="d-flex justify-content-center my-3 ">
+                    <button type="submit" class="btn btn-success" style="margin-right: 10px;" id="set" name="set" value="off">Set</button>
+                    <button type="submit" class="btn btn-danger text-right" id="off" name="off" value="off">Off</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="items float-lg-left">
+            <h4 class="text-center mb-3"> Controller 3 </h4>
+            <form class="form-range" method="post">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Mode</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Choose...</option>
+                        <option value="wheel">Wheel</option>
+                        <option value="rainbow">Rainbow</option>
+                        <option value="rainbowCycle">Rainbow Cycle</option>
+                        <option value="colorWipe">Color Wipe</option>
+                        <option value="theaterChase">Theater Chase</option>
+                        <option value="theaterChaseRainbow">Theater Chase Rainbow</option>
+                        <option value="scrollWipe">Scroll Wipe</option>
+                        <option value="fade">Fade</option>
+                        <option value="solid">Solid</option>
+                    </select>
+                </div>
+                <h6 class="text-center mb-0"> Wait</h6>
+                <div class="d-flex justify-content-center my-2 ">
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                    <label>
+                        <input  class="form-control-range" type="range" min="0" max="1000">
+                    </label>
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">1000</span>
+                </div>
+                <h6 class="text-center mb-0"> Brightness</h6>
+                <div class="d-flex justify-content-center my-2 ">
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">0</span>
+                    <label>
+                        <input  class="form-control-range" type="range" min="0" max="1000">
+                    </label>
+                    <span class="font-weight-bold indigo-text mr-2 mt-1">100</span>
+                </div>
+                <div class="d-flex justify-content-center my-3 ">
+                    <label>
+                        <input  type="color" name="color" value="#ff0000">
+                    </label>
+                </div>
+                <div class="d-flex justify-content-center my-3 ">
+                    <button type="submit" class="btn btn-success" style="margin-right: 10px;" id="set" name="set" value="set">Set</button>
+                    <button type="submit" class="btn btn-danger text-right" id="off" name="off" value="off">Off</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+</body>
